@@ -23,18 +23,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
-      - name: Cache node_modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund --legacy-peer-deps
 
-      - run: npm install
-      - run: npm run build:gh-pages
+      - name: Build
+        run: npm run build:gh-pages
 
       - uses: actions/upload-pages-artifact@v3
         with:
