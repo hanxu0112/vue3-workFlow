@@ -1,0 +1,85 @@
+.scene-flow-chart {
+    width: 100%;
+    height: 100%; // 撑满 el-main 剩余高度（不能用 100vh，否则超出主区域产生页面滚动条）
+    overflow: hidden;
+    position: relative; // 让 beauty-btn 等绝对定位元素相对画布区域定位
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container {
+    width: 100%;
+    height: 100%; // 画布容器必须有明确尺寸
+}
+.draggable-node {
+    min-width: 100px;
+    height: 40px;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon-box {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .menu-box {        
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+    }
+}
+
+.beauty-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    .addNode-btn {
+        background-color: #e9edfb;
+        font-size: 13px;
+        color: #5147ff;
+        height: 34px;
+    }
+    .el-button {
+        // margin-left: 2px;
+    }
+    .tool-btn {
+        // font-size: 14px;
+        // cursor: pointer;
+    }
+}
+.menus-btn-group {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: fit-content;
+    height: auto;
+    /* 替换flex为grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 一行4等分 */
+    padding: 8px;
+    gap: 8px;
+}

@@ -1,0 +1,51 @@
+.scene-node-drawer .el-drawer__header {
+  height: 56px;
+  padding: 0 12px;
+  border-bottom: 1px solid #e9eef3;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+.scene-node-drawer .el-drawer__header .el-drawer__title {
+  line-height: 40px;
+  font-size: 14px;
+}
+.drawer-title-wrap {
+  display: flex;
+  align-items: center;
+  span {
+    color: #0f172a;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+.collapse-theme {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #0f172a;
+  }
+}
+.module-content {
+  margin-bottom: 12px;
+} 
+.child-signal-content {
+  background: #f7f9fb;
+  border-radius: 8px;
+  padding: 12px;
+}
+.table-content {
+  padding: 12px;
+}
+.border-content {
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.textArea-mt {
+  margin-top: 10px;
+}
