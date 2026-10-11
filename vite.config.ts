@@ -7,7 +7,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/vue3-workflow/',
+  base: '/vue3-workFlow/',
   plugins: [
     vue(),
     AutoImport({
