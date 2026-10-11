@@ -33,7 +33,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-modules-
 
-      - run: npm ci
+      - run: npm install
       - run: npm run build:gh-pages
 
       - uses: actions/upload-pages-artifact@v3
