@@ -1,4 +1,5 @@
 # Vue3 TS App · 任务流程编排系统
+运行试试：https://hanxu0112.github.io/vue3-workFlow
 
 基于 **Vue 3 + TypeScript** 实现的可视化**任务流程编排系统**，以 AntV X6 图编辑引擎为核心，支持拖拽编排节点、连线驱动、节点配置抽屉、自动层次布局等能力。原始场景面向**智能诊断**等业务范畴，其节点模型（开始 / 判断 / 大语言模型 / 代码 / MCP 插件 / 数据库 / 结束）通用且可扩展，可广泛应用于 Agent 工作流编排、车联网诊断、数据处理流水线、审批流等业务场景。
 
@@ -14,17 +15,6 @@
 - **全局状态管控**：Vuex 管理抽屉显隐与当前编辑节点，便于跨组件控制。
 - **多环境支持**：SIT / UAT / 生产三套环境配置与构建脚本。
 - **工程化**：Element Plus 组件按需自动导入、路径别名、API 代理、TypeScript 严格检查。
-
-### 可扩展的业务范畴
-
-节点模型为「形状（shape）+ 组件 + 图标 + 配置表单」的统一抽象，新增业务节点只需四步：
-
-1. `src/views/canvasComponents/customNodes/` 下新增 `{shape}.vue` 节点组件；
-2. `src/assets/canvasIcons/` 下新增 `{shape}.svg` 图标；
-3. `src/views/canvasComponents/common/menuList.ts` 与 `registerNode.ts` 注册 shape；
-4. `src/views/canvasComponents/canvasForm/` 下新增 `{shape}Form.vue` 配置表单，并在 `nodeCommonDialog.vue` 的 `FORM_MAP` 中映射。
-
----
 
 ## 技术栈
 
