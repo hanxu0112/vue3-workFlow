@@ -22,7 +22,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Cache node_modules
@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-node-modules-
 
       - run: npm ci
-      - run: npm run build
+      - run: npm run build:gh-pages
 
       - uses: actions/upload-pages-artifact@v3
         with:

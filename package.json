@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build --mode production",
+    "build:gh-pages": "vite build --mode production",
     "build:sit": "vue-tsc -b && vite build --mode sit",
     "build:uat": "vue-tsc -b && vite build --mode uat",
     "build:prod": "vue-tsc -b && vite build --mode production",
